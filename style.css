@@ -1,4 +1,4 @@
-*{ 
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,7 +51,7 @@ main{
     /* clip-path: circle(); */
     border-radius: 100%;
 
-    border: 3px solid white;
+    border: 3px solid rgb(235, 235, 235);
 }
 
 .top-circle-red, .top-circle-yellow, .top-circle-green{
@@ -136,6 +136,7 @@ main{
 
 .left-box-image-bottom-circle{
     background-color: #8D261F;
+    background-image: linear-gradient(to top right, #8D261F, #bb2e24);
     height: 1.5rem;
     width: 1.5rem;
     /* clip-path: circle(); */
@@ -160,7 +161,8 @@ main{
 }
 
 .bottom-circle-blue{
-    background-color: #2F62DD;
+    /* background-color: #2F62DD; */
+    background-image: linear-gradient(to top right, #2F62DD, #3d72ec);
     height: 3rem;
     width: 3rem;
     border-radius: 100%;
@@ -179,10 +181,12 @@ main{
 
 .bottom-rectangle-green{
     background-color: #D94136;
+    background-image: linear-gradient(to top right, #cc372c, #D94136);
 }
 
 .bottom-rectangle-orange{
     background-color: #6FB719;
+    background-image: linear-gradient(to top right, #558f0f, #6FB719);
 }
 
 .bottom-buttons-black{
@@ -247,9 +251,9 @@ main{
     /* height: 30rem; */
     grid-area: colun;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     /* padding: 4.2rem 0; */
 
 
@@ -267,17 +271,23 @@ main{
     /* z-index: 4; */
 
     background-color: #B9352C;
-    width: 1.25rem;
+    width: 50%;
 
-    /* box-shadow: 1.25rem 0 0rem rgba(0, 0, 0, 0.288), -1.25rem 0 0rem rgba(0, 0, 0, 0.288); */
-    /* box-shadow: 1.25rem 0 1rem rgba(0, 0, 0, 0.288); */
+}
+
+.shadow-column1{
+    background-image: linear-gradient(to left, #B9352C , #8D261F);
+}
+
+.shadow-column2{
+    background-image: linear-gradient(to right, #B9352C , #8D261F);
 }
 
 .part-column{
     height: 3.5rem;
     width: 100%;
-    /* background-color: #8D261F; */
-    background-color: #a12e26;
+    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: #a12e26; */
     position: absolute;
     z-index: 3;
 }
@@ -333,7 +343,8 @@ main{
 }
 
 .right-button-blue{
-    background-color: #2F62DD;
+    /* background-color: #2F62DD; */
+    background-image: linear-gradient(to top right, #2F62DD, #3d72ec);
     height: 2rem;
     width: 3rem;
     border-radius: .7rem;
