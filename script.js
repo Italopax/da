@@ -16,8 +16,9 @@ function createEle (type, conteudo, infos) {
     infos.appendChild(newElement);
 }
 
-function clean (area) {
-    area.innerHTML = "";
+function clean (infos, boxImage) {
+    infos.innerHTML = "";
+    boxImage.style.backgroundImage = 'none';
 }
 
 function showInfos () {
@@ -28,7 +29,7 @@ function showInfos () {
     let infos = document.querySelector(".infos")
     let url = "https://pokeapi.co/api/v2/pokemon/";
     
-    clean(infos);
+    clean(infos, image);
 
     fetch(`${url}${inputValue}`)
         .then((res)=>{
@@ -40,3 +41,10 @@ function showInfos () {
             createEle("weight", parseFloat(data.weight)/10, infos);
         })
 }
+
+document.querySelector("#valor").addEventListener("keydown", function(e) {
+    if(e.keyCode === 13) {    
+        e.preventDefault();
+        showInfos();
+    }
+});
